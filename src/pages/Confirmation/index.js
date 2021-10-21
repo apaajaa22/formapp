@@ -28,6 +28,11 @@ function Confirmation() {
         <p>Have a Laptop/PC: {data?.option}</p>
         <p>Mobile number: {data?.phone}</p>
         <p>Address: {data?.address}</p>
+        {
+          data?.jobdesc?.map((res) => {
+            return <p>Jobdesc: {res.jobdesc}</p>
+          })
+        }
         <div className="flex flex-row justify-center gap-2">
           <Link
             to="/register/next"
